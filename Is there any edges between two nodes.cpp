@@ -1,3 +1,6 @@
+//https://www.hackerearth.com/practice/notes/graph-theory-part-i/
+
+
 #include<bits/stdc++.h>
 using namespace std ;
 
@@ -14,11 +17,12 @@ int main()
 {
     int edges ,nodes ;
     int x,y;
-    cin>>edges>>nodes;
+    initialize();     // Since there is no edge initially
+    cin>>edges>>nodes;          
     for(int i=0;i<edges;i++)
     {
         cin>>x>>y;
-        graph[x][y]= true ;
+        graph[x][y]= true ;        //mark the edges from vertex x to vertex y
     }
 
     int posX, posY ;
