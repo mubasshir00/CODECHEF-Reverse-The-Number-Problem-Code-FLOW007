@@ -12,7 +12,7 @@ void DFSUtil(int x ,vector<int>graph[],vector<bool>&visited)
             DFSUtil(graph[x][i],graph,visited);  //if nor visited then repeat DFSUtil
     }
 
-DFS(vector<int>graph[],int V)
+DFS(vector<int>graph[],int vertex )
 {
     vector<bool>visited(V,false);
     for(int x=0;x<V;x++)
@@ -21,10 +21,10 @@ DFS(vector<int>graph[],int V)
 }
 int main()
 {
-    int V;
-    int m;
-    cin>>V>>m;
-    for(int i=0;i<m;i++)
+    int vertex ;
+    int edge ;
+    cin>>V>>edge ;
+    for(int i=0;i<edge ;i++)
     {
         int x,y;
         cin>>x>>y;
@@ -32,6 +32,6 @@ int main()
         graph[y].push_back(x);
 
     }
-     DFS(graph,V);
+     DFS(graph,vertex );
     return 0 ;
 }
